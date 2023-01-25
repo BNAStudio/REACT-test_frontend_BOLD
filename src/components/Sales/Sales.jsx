@@ -14,22 +14,22 @@ export const Sales = () => {
     const { data, dispatch } = useContext(storageContext);
 
     const onClickHandleByDay = () => {
-        dispatch({ filter: types.today, payload: byDay(data.users) })
+        dispatch({ filter: types.today, payload: byDay(data.originalData) })
     }
     const onClickHandleByWeek = () => {
-        dispatch({ filter: types.week, payload: byWeek(data.users) })
+        dispatch({ filter: types.week, payload: byWeek(data.originalData) })
     }
     const onClickHandleByMonth = () => {
-        dispatch({ filter: types.month, payload: byMonth(data.users) })
+        dispatch({ filter: types.month, payload: byMonth(data.originalData) })
     }
     const onChangeHandleByDataphone = () => {
-        dispatch({ filter: types.dataPhone, payload: byDataPhone(data.users) })
+        dispatch({ filter: types.dataPhone, payload: byDataPhone(data.originalData) })
     }
     const onChangeHandleByLink = () => {
-        dispatch({ filter: types.link, payload: byLink(data.users) })
+        dispatch({ filter: types.link, payload: byLink(data.originalData) })
     }
 
-    // console.log(data)
+    console.log(data);
 
     return (
         <section className={css[`main-section`]}>
@@ -55,7 +55,9 @@ export const Sales = () => {
                     className={css[`btn`]}
                     onClick={onChangeHandleByLink}
                 >Link</button>
+                {/* TABLA */}
             </div>
+            <p>{JSON.stringify(data.users.map(item => item.id))}</p>
         </section >
     )
 }

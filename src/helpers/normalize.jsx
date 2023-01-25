@@ -29,14 +29,18 @@ export function byDay(data) {
 }
 
 export function byWeek(data) {
+    const today = new Date()
+    const newData = data;
     const lastSevenDaysData = [];
-    for (let i = 0; i < data.length; i++) {
-        const date = new Date(data[i].date);
-        const differenceInDays = (DATE_OBJ - date) / (1000 * 60 * 60 * 24);
-        if (differenceInDays <= 7) {
-            lastSevenDaysData.push(data[i]);
-        }
+
+    for (let i = 0; i < newData.length; i++) {
+        const date = new Date(newData[i].date);
+
+        const differenceInDays = (today - date) / (1000 * 60 * 60 * 24);
+        
+        if (differenceInDays <= 7) lastSevenDaysData.push(newData[i])
     }
+
     return lastSevenDaysData;
 }
 
