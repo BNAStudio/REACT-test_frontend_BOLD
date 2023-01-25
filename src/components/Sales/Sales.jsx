@@ -1,6 +1,9 @@
 import { Card } from '../Card/Card'
 import css from './Sales.module.css'
-import useDatabase from '../../Hooks/useDatabase';
+import { useContext } from 'react';
+import { storageContext } from '../../context/storageContext';
+import { types } from '../../types/types';
+import { byDay, byWeek, byMonth, byDataPhone, byLink } from '../../helpers/normalize';
 
 export const Sales = () => {
 
@@ -8,13 +11,25 @@ export const Sales = () => {
     const MONTHS = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     const currentMonth = MONTHS[DATE.getMonth()];
 
-    const URL = "./src/db/db.json"
-    const data = useDatabase(URL)
+    const { data, dispatch } = useContext(storageContext);
 
-    const onClickHandle = (e) => {
-        const { users } = data
-        console.log(users)
+    const onClickHandleByDay = () => {
+        dispatch({ filter: types.today, payload: byDay(data.users) })
     }
+    const onClickHandleByWeek = () => {
+        dispatch({ filter: types.week, payload: byWeek(data.users) })
+    }
+    const onClickHandleByMonth = () => {
+        dispatch({ filter: types.month, payload: byMonth(data.users) })
+    }
+    const onChangeHandleByDataphone = () => {
+        dispatch({ filter: types.dataPhone, payload: byDataPhone(data.users) })
+    }
+    const onChangeHandleByLink = () => {
+        dispatch({ filter: types.link, payload: byLink(data.users) })
+    }
+
+    // console.log(data)
 
     return (
         <section className={css[`main-section`]}>
@@ -22,16 +37,24 @@ export const Sales = () => {
             <div className={css[`c-filter-btn`]}>
                 <button
                     className={css[`btn`]}
-                    onClick={onClickHandle}
+                    onClick={onClickHandleByDay}
                 >Hoy</button>
                 <button
                     className={css[`btn`]}
-                    onClick={() => console.log('Online from "Esta semana"')}
+                    onClick={onClickHandleByWeek}
                 >Esta semana</button>
                 <button
                     className={css[`btn`]}
-                    onClick={() => console.log('Online from "Este mes"')}
+                    onClick={onClickHandleByMonth}
                 >{currentMonth}</button>
+                <button
+                    className={css[`btn`]}
+                    onClick={onChangeHandleByDataphone}
+                >Dataphone</button>
+                <button
+                    className={css[`btn`]}
+                    onClick={onChangeHandleByLink}
+                >Link</button>
             </div>
         </section >
     )
