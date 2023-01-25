@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+:root {
+  --primary: #111e6c;
+  --primary-hover: #3247bd;
+  --secundary: #ef434e;
+  --secundary-hover: #d34e56;
+  --grey: #323232;
+  --midLight: #969696;
+  --light: #e5e7ef;
+  --gradient-header: linear-gradient(
+    90deg,
+    hsla(231, 73%, 25%, 1) 64%,
+    hsla(356, 84%, 60%, 1) 100%
+  );
+  --gradient-card: linear-gradient(
+    90deg,
+    rgb(88, 50, 97, 0.9) 50%,
+    rgb(206, 94, 102) 100%
+  );
+  --gradient-sales: linear-gradient(
+    90deg,
+    hsla(231, 73%, 25%, 1) 0%,
+    hsla(333, 47%, 37%, 1) 70%,
+    hsla(350, 55%, 51%, 1) 95%,
+    hsla(356, 84%, 60%, 1) 100%
+  );
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--midLight);
+}
+
+a {
+  color: var(--midLight);
+  transition: color 0.25s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: red;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  all: unset;
+}
+
+button:hover {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.main-section {
+  display: flex;
+  /* flex-wrap: wrap; */
+  width: 100%;
+  padding: 0 10%;
+  margin: 2% 0;
+  gap: 20px;
+}
+
+/*--- mobile screen ---*/
+@media only screen and (min-width: 320px) {
+}
+
+/*--- table screen ---*/
+@media only screen and (min-width: 768px) {
+}
+
+/*--- desktop screen ---*/
+@media only screen and (min-width: 1200px) {
+}
+
