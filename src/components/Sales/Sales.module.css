@@ -1,0 +1,53 @@
+.main-section {
+	display: flex;
+	width: 100%;
+	padding: 0 10%;
+	margin: 2% 0;
+	gap: 20px;
+}
+
+.c-filter-btn {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: max-content;
+	border-radius: 10px;
+	background-color: var(--light);
+	box-shadow: 10px 5px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 5px;
+	padding: 15px;
+	border-radius: 30px;
+	color: var(--primary);
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.btn:hover {
+	background-color: var(--midLight);
+	color: var(--primary-hover);
+}
+
+.btn:focus {
+	color: var(--secundary-hover);
+	background-color: var(--midLight);
+	transform: scale(1.01);
+}
+
+/*--- mobile screen ---*/
+@media only screen and (min-width: 320px) {
+}
+
+/*--- table screen ---*/
+@media only screen and (min-width: 768px) {
+}
+
+/*--- desktop screen ---*/
+@media only screen and (min-width: 1200px) {
+}
