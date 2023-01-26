@@ -1,20 +1,19 @@
-import { useEffect, useCallback } from 'react';
-import useSessionStorage from './useSessionStorage';
+import { useState, useEffect } from 'react'
 
 function useDatabase(url) {
-    const [data, setData] = useSessionStorage('data', []);
 
-    const fetchData = useCallback(async () => {
-        const response = await fetch(url);
-        const data = await response.json();
-        setData(data);
-    }, [url]);
+    const [data, setData] = useState(null)
 
     useEffect(() => {
-        fetchData();
-    }, [fetchData]);
+        (async function () {
+            const response = await fetch(url)
+            const data = await response.json()
+            setData(data)
+        }
+        )()
+    }, [url])
 
-    return data;
+    return data
+
 }
-
 export default useDatabase;

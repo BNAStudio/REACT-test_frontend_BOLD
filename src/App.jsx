@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { Header, Sales } from './components/index.js';
 import { storageContext } from './context/storageContext'
 import { storageReducer } from './context/storageReducer'
@@ -8,16 +8,26 @@ import { types } from './types/types.js';
 const URL = "./src/db/db.json"
 
 function App() {
-  const {users} = useDatabase(URL)
+  const fetch = useDatabase(URL)
 
   const initialData = {
-    users: users ?? [],
+    users: [],
     filter: types.all,
-    originalData: users
+    originalData: []
   }
+
 
   // inicializa estado
   const [data, dispatch] = useReducer(storageReducer, initialData)
+
+
+  useEffect(() => {
+    if (!fetch) return;
+
+    dispatch({ filter: types.initialize, payload: fetch.users })
+
+  }, [fetch])
+
 
 
   return (

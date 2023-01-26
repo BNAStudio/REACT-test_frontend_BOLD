@@ -85,7 +85,3 @@ React es una librería que proporciona una gran cantidad de herramientas y carac
 3. Se podria implementar la libreria storybook para la visualizacion de los elementos de la interfaz.
 4. Se podria implementar pruebas unitarias y de integracion con JEST o CYPRESS.
 5. Con mas tiempo hubiese sido posible refactorizar el codigo para hacerlo mas eficiente y compacto.
-
-### BUGS detectados:
-
-Debido a que no se alcanzo a finalizar la funcionalidad del sessionStorage, es necesario actualizar la pagina la primera vez, para que se renderice la DATA de las transacciones. Posiblemente se debe a que el hook | useDatabase | implementa el hook | useSessionStorage | y la informacion que retorna del hook | useDatabas | proviene directamente del almacenamiento en cache. En la primera carga no existe data en el almacenamiento, por lo que es necesario refrescar la pagina para cargar la info.
