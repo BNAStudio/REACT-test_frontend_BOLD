@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import css from './Sales.module.css'
 import { Card, Table } from '../index'
 import { useContext } from 'react';
@@ -6,7 +6,6 @@ import { storageContext } from '../../context/storageContext';
 import { types } from '../../types/types';
 import { byDay, byWeek, byMonth, byDataPhone, byLink } from '../../helpers/normalize';
 import { ImEqualizer2 } from 'react-icons/im'
-import { AiOutlineClear } from 'react-icons/ai';
 
 export const Sales = () => {
 
@@ -21,8 +20,6 @@ export const Sales = () => {
     const DATE = new Date();
     const MONTHS = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     const currentMonth = MONTHS[DATE.getMonth()];
-
-
 
     const onClickHandleByDay = () => {
         setIsDisable(false)
@@ -62,8 +59,6 @@ export const Sales = () => {
         setShow(!show)
     }
 
-
-
     return (
         <>
             <section className={css[`main-section`]}>
@@ -83,7 +78,8 @@ export const Sales = () => {
                         <button
                             className={css[`btn`]}
                             onClick={onClickHandleByMonth}
-                        >{currentMonth}</button>                        <button
+                        >{currentMonth}</button>
+                        <button
                             className={css[`btn`]}
                             onClick={onClickHandler}>Mas filtros<ImEqualizer2 className={css[`btn-filter-icon`]} />
                         </button>
@@ -140,15 +136,3 @@ export const Sales = () => {
         </>
     )
 }
-
-
-{/* <button
-    className={css[`btn`]}
-    onClick={onChangeHandleByDataphone}
->Dataphone</button>
-<button
-    className={css[`btn`]}
-    onClick={onChangeHandleByLink}
->Link</button> */}
-
-{/* <AiOutlineClear className={css[`btn-clear-icon`]} /> */ }
