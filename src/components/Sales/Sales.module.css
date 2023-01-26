@@ -1,8 +1,15 @@
 .main-section {
 	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	padding: 0 10%;
 	margin: 2% 0;
+	gap: 20px;
+}
+
+.c-card-filter {
+	display: flex;
+	width: 100%;
 	gap: 20px;
 }
 
@@ -25,7 +32,7 @@
 	padding: 15px;
 	border-radius: 30px;
 	color: var(--primary);
-	font-weight: bold;
+	font-weight: 500;
 	font-size: 1.3rem;
 }
 
@@ -35,19 +42,51 @@
 }
 
 .btn:focus {
-	color: var(--secundary-hover);
+	color: var(--primary);
 	background-color: var(--midLight);
 	transform: scale(1.01);
+	font-weight: bold;
+}
+
+.btn-filter-icon {
+	margin-left: 15px;
+}
+
+.c-table {
+	width: 100%;
+	max-height: max-content;
 }
 
 /*--- mobile screen ---*/
 @media only screen and (min-width: 320px) {
+	.c-card-filter {
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.c-filter-btn {
+		flex-wrap: wrap;
+	}
 }
 
 /*--- table screen ---*/
 @media only screen and (min-width: 768px) {
+	.c-card-filter {
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.c-filter-btn {
+		flex-wrap: nowrap;
+	}
 }
 
 /*--- desktop screen ---*/
 @media only screen and (min-width: 1200px) {
+	.c-card-filter {
+		flex-wrap: nowrap;
+	}
+	.c-filter-btn {
+		flex-wrap: nowrap;
+	}
 }

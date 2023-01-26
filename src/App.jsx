@@ -12,7 +12,8 @@ function App() {
 
   const initialData = {
     users: users,
-    filter: types.all
+    filter: types.all,
+    originalData: users
   }
 
   // inicializa estado
