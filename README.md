@@ -70,7 +70,7 @@ Si tienes preguntas o problemas con el proyecto, contáctame en [click aqui](mai
 
 ## Recursos
 
-- [Repositorio](https://github.com/BNAStudio/REACT-test_frontend_BOLD-)
+- [Repositorio](https://github.com/BNAStudio/REACT-test_frontend_BOLD)
 
 ## Argumentacion
 
