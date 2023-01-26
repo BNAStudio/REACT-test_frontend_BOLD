@@ -47,12 +47,12 @@ export function byWeek(data) {
 }
 
 export function byMonth(data) {
-    let currentWeek = new Date();
-    let weekStart = new Date(currentWeek.getFullYear(), currentWeek.getMonth(), currentWeek.getDate() - currentWeek.getDay());
-    let weekEnd = new Date(currentWeek.getFullYear(), currentWeek.getMonth(), currentWeek.getDate() + (6 - currentWeek.getDay()));
-    return data.filter(function (obj) {
-        let date = new Date(obj.date);
-        return date >= weekStart && date <= weekEnd;
+    // Obtiene el mes actual en formato numérico (01-12)
+    const currentMonth = new Date().getMonth() + 1;
+    // Filtra los elementos del array que pertenecen al mes actual
+    return data.filter((item) => {
+        const itemMonth = new Date(item.date).getMonth() + 1;
+        return itemMonth === currentMonth;
     });
 }
 

@@ -3,7 +3,7 @@
 		{
 			"id": 1,
 			"success": false,
-			"date": "2023-01-26T17:14:24.000Z",
+			"date": "2023-01-28T17:14:24.000Z",
 			"info_card": "4400 5200 1522 3300",
 			"amount": 25000,
 			"payment_method": {
@@ -14,7 +14,7 @@
 		{
 			"id": 2,
 			"success": true,
-			"date": "2023-01-24T16:20:04.000Z",
+			"date": "2023-01-27T16:20:04.000Z",
 			"info_card": "4400 3600 2566 3633",
 			"amount": 115000,
 			"payment_method": {
@@ -25,7 +25,7 @@
 		{
 			"id": 3,
 			"success": true,
-			"date": "2023-01-23T16:20:04.000Z",
+			"date": "2023-01-26T16:20:04.000Z",
 			"info_card": "4400 2500 7802 5251",
 			"amount": 825000,
 			"payment_method": {
@@ -36,7 +36,7 @@
 		{
 			"id": 4,
 			"success": false,
-			"date": "2023-01-22T19:50:41.000Z",
+			"date": "2023-01-25T19:50:41.000Z",
 			"info_card": "4400 3500 2578 1245",
 			"amount": 330000,
 			"payment_method": {
@@ -47,7 +47,7 @@
 		{
 			"id": 5,
 			"success": false,
-			"date": "2022-12-31T12:50:41.000Z",
+			"date": "2023-01-24T12:50:41.000Z",
 			"info_card": "4400 3500 2578 1245",
 			"amount": 830000,
 			"payment_method": {
@@ -58,7 +58,7 @@
 		{
 			"id": 6,
 			"success": false,
-			"date": "2022-11-13T17:14:24.000Z",
+			"date": "2023-01-13T17:14:24.000Z",
 			"info_card": "4400 5200 1522 3300",
 			"amount": 275000,
 			"payment_method": {
@@ -69,7 +69,7 @@
 		{
 			"id": 7,
 			"success": true,
-			"date": "2022-11-15T16:20:04.000Z",
+			"date": "2023-01-15T16:20:04.000Z",
 			"info_card": "4400 3600 2566 3633",
 			"amount": 315000,
 			"payment_method": {
@@ -80,7 +80,7 @@
 		{
 			"id": 8,
 			"success": true,
-			"date": "2022-10-07T21:21:45.000Z",
+			"date": "2023-01-07T21:21:45.000Z",
 			"info_card": "4400 2500 7802 5251",
 			"amount": 225000,
 			"payment_method": {
@@ -91,7 +91,7 @@
 		{
 			"id": 9,
 			"success": false,
-			"date": "2022-10-24T12:50:41.000Z",
+			"date": "2023-01-04T12:50:41.000Z",
 			"info_card": "4400 3500 2578 1245",
 			"amount": 530000,
 			"payment_method": {
@@ -102,7 +102,117 @@
 		{
 			"id": 10,
 			"success": false,
-			"date": "2022-09-31T12:50:41.000Z",
+			"date": "2023-01-01T12:50:41.000Z",
+			"info_card": "4400 3500 2578 1245",
+			"amount": 130000,
+			"payment_method": {
+				"dataphone": true,
+				"link": false
+			}
+		},
+		{
+			"id": 11,
+			"success": false,
+			"date": "2022-12-26T17:14:24.000Z",
+			"info_card": "4400 5200 1522 3300",
+			"amount": 25000,
+			"payment_method": {
+				"dataphone": true,
+				"link": false
+			}
+		},
+		{
+			"id": 12,
+			"success": true,
+			"date": "2022-12-24T16:20:04.000Z",
+			"info_card": "4400 3600 2566 3633",
+			"amount": 115000,
+			"payment_method": {
+				"dataphone": false,
+				"link": true
+			}
+		},
+		{
+			"id": 13,
+			"success": true,
+			"date": "2022-12-23T16:20:04.000Z",
+			"info_card": "4400 2500 7802 5251",
+			"amount": 825000,
+			"payment_method": {
+				"dataphone": false,
+				"link": true
+			}
+		},
+		{
+			"id": 14,
+			"success": false,
+			"date": "2022-12-22T19:50:41.000Z",
+			"info_card": "4400 3500 2578 1245",
+			"amount": 330000,
+			"payment_method": {
+				"dataphone": true,
+				"link": false
+			}
+		},
+		{
+			"id": 15,
+			"success": false,
+			"date": "2022-11-31T12:50:41.000Z",
+			"info_card": "4400 3500 2578 1245",
+			"amount": 830000,
+			"payment_method": {
+				"dataphone": true,
+				"link": false
+			}
+		},
+		{
+			"id": 16,
+			"success": false,
+			"date": "2022-11-13T17:14:24.000Z",
+			"info_card": "4400 5200 1522 3300",
+			"amount": 275000,
+			"payment_method": {
+				"dataphone": true,
+				"link": false
+			}
+		},
+		{
+			"id": 17,
+			"success": true,
+			"date": "2022-10-15T16:20:04.000Z",
+			"info_card": "4400 3600 2566 3633",
+			"amount": 315000,
+			"payment_method": {
+				"dataphone": false,
+				"link": true
+			}
+		},
+		{
+			"id": 18,
+			"success": true,
+			"date": "2022-10-07T21:21:45.000Z",
+			"info_card": "4400 2500 7802 5251",
+			"amount": 225000,
+			"payment_method": {
+				"dataphone": false,
+				"link": true
+			}
+		},
+		{
+			"id": 19,
+			"success": false,
+			"date": "2022-09-24T12:50:41.000Z",
+			"info_card": "4400 3500 2578 1245",
+			"amount": 530000,
+			"payment_method": {
+				"dataphone": true,
+				"link": false
+			}
+		},
+		{
+			"id": 20,
+			"success": false,
+			"date": "2022-08-31T12:50:41.000Z",
 			"info_card": "4400 3500 2578 1245",
 			"amount": 130000,
 			"payment_method": {
