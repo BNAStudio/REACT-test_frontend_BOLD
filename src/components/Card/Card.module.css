@@ -49,12 +49,21 @@
 
 /*--- mobile screen ---*/
 @media only screen and (min-width: 320px) {
+	.c-card {
+		max-width: none;
+	}
 }
 
 /*--- table screen ---*/
 @media only screen and (min-width: 768px) {
+	.c-card {
+		max-width: none;
+	}
 }
 
 /*--- desktop screen ---*/
 @media only screen and (min-width: 1200px) {
+	.c-card {
+		max-width: 400px;
+	}
 }

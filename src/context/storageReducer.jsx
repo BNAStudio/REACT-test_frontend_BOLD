@@ -1,7 +1,7 @@
 import { types } from '../types/types.js'
 
 export const storageReducer = (state, actions) => {
-    console.log(actions)
+    // console.log(actions)
 
     switch (actions.filter) {
         case types.all:
