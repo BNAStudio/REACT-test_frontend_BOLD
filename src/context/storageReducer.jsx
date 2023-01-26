@@ -4,6 +4,9 @@ export const storageReducer = (state, actions) => {
     // console.log(actions)
 
     switch (actions.filter) {
+        case types.initialize:
+            return { originalData: actions.payload, users: actions.payload, filter: actions.type }
+
         case types.all:
             return { ...state, users: actions.payload, filter: actions.type }
 

@@ -4,5 +4,6 @@ export const types = {
     week: "week",
     month: "month",
     dataPhone: "dataPhone",
-    link: "link"
+    link: "link",
+    initialize: "initialize"
 }
