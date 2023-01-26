@@ -5,7 +5,7 @@ import { storageReducer } from './context/storageReducer'
 import useDatabase from './Hooks/useDatabase';
 import { types } from './types/types.js';
 
-const URL = "./src/db/db.json"
+const URL = "./db.json"
 
 function App() {
   const fetch = useDatabase(URL)
