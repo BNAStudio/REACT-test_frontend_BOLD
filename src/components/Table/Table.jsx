@@ -24,7 +24,6 @@ function getUserInfo(data) {
 
 export const Table = ({ data }) => {
     const infoUser = getUserInfo(data)
-    console.log(infoUser);
     return (
         <div className={css[`table`]}>
             <h2 className={css[`table-header`]}>

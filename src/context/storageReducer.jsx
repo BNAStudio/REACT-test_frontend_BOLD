@@ -5,7 +5,7 @@ export const storageReducer = (state, actions) => {
 
     switch (actions.filter) {
         case types.all:
-            return { ...state, filter: actions.type }
+            return { ...state, users: actions.payload, filter: actions.type }
 
         case types.today:
             return { ...state, users: actions.payload, filter: actions.type }
