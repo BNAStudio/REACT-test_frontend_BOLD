@@ -11,7 +11,7 @@ function App() {
   const {users} = useDatabase(URL)
 
   const initialData = {
-    users: users,
+    users: users ?? [],
     filter: types.all,
     originalData: users
   }

@@ -23,6 +23,7 @@ export function generateId() {
 
 export function byDay(data) {
     let currentDate = new Date();
+    console.log(data)
     return data.filter(function (obj) {
         let date = new Date(obj.date);
         return date.getDate() === currentDate.getDate() &&
