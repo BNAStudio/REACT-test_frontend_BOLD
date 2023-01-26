@@ -33,7 +33,7 @@ function App() {
   return (
     <storageContext.Provider value={{ data, dispatch }} >
       <div className="App">
-        <Header logo="./src/assets/images/header_logo.png" />
+        <Header logo="src/assets/images/header_logo.png" />
         <Sales />
       </div>
     </storageContext.Provider>
